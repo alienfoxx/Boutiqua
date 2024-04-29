@@ -36,6 +36,13 @@ const Button = styled.button`
   border: none;
   background-color: teal;
   color: #fff;
+  cursor:pointer;
+
+  &:hover{
+    transition: all 0.5s ease;
+    background:#fcf5f5;
+    color:teal;
+  }
 `;
 
 const Newsletter = () => {
