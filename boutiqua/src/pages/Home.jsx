@@ -4,6 +4,7 @@ import Anounecment from "../componenet/Anouncement";
 import Slider from "../componenet/Slider";
 import Categories from "../componenet/Categories";
 import Products from "../componenet/Products";
+import Newsletter from "../componenet/Newsletter";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Slider/>
       <Categories/>
       <Products/>
+      <Newsletter/>
 
     </div>
   );
