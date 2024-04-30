@@ -10,8 +10,9 @@ import Footer from "../componenet/Footer";
 const Home = () => {
   return (
     <div>
-    <Anounecment/>
+   
       <Navbar/>
+      <Anounecment/>
       <Slider/>
       <Categories/>
       <Products/>

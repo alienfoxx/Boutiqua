@@ -9,8 +9,14 @@ import {
 } from "@material-ui/icons";
 import styled from "styled-components";
 
+import {mobile} from "../responsive";
+
 const Container = styled.div`
   display: flex;
+
+  ${mobile({
+    flexDirection:"column"
+  })}
 `;
 const Left = styled.div`
   flex: 1;
@@ -42,10 +48,12 @@ background: ${(props) => props.color};#
 
 
 `;
-
+// you should nack here to work in links
 const Center = styled.div`
   flex: 1;
   padding: 20px;
+
+ 
 `;
 
 const Title = styled.h3`
@@ -67,6 +75,10 @@ const ListItem = styled.li`
 const Right = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({
+    backgroundColor:"#f6f6f6"
+  })}
+
 `;
 
 const ContactItem = styled.div`
