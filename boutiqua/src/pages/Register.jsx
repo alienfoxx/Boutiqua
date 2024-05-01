@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { mobile } from "../responsive";
+import Navbar from "../componenet/Navbar";
 
 const Container = styled.div`
   width: 100vw;
@@ -63,6 +64,8 @@ const Button = styled.button`
 
 const Register = () => {
   return (
+    <>
+    <Navbar/>
     <Container>
       <Wrapper>
         <Title>CREAT ACCOUNT</Title>
@@ -81,6 +84,9 @@ const Register = () => {
         </Form>
       </Wrapper>
     </Container>
+    
+    
+    </>
   );
 };
 

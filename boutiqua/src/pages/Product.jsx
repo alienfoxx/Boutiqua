@@ -5,6 +5,7 @@ import Newsletter from "../componenet/Newsletter";
 import Footer from "../componenet/Footer";
 import { Add, Remove } from "@material-ui/icons";
 import { mobile } from "../responsive";
+import { Link } from "react-router-dom";
 
 const Container = styled.div``;
 
@@ -13,8 +14,8 @@ const Wrraper = styled.div`
   display: flex;
 
   ${mobile({
-    flexDirection:"column",
-    padding:"10px"
+    flexDirection: "column",
+    padding: "10px",
   })}
 `;
 
@@ -28,7 +29,7 @@ const Image = styled.img`
   object-fit: contain;
 
   ${mobile({
-    height:"40vh"
+    height: "40vh",
   })}
 `;
 
@@ -36,7 +37,7 @@ const InfoContainer = styled.div`
   flex: 1;
   padding: 0 50px;
   ${mobile({
-    padding:"10px"
+    padding: "10px",
   })}
 `;
 
@@ -60,7 +61,7 @@ const FilterContainer = styled.div`
   justify-content: space-between;
 
   ${mobile({
-    width:"100%"
+    width: "100%",
   })}
 `;
 
@@ -96,7 +97,7 @@ const AddContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   ${mobile({
-    width:"100%"
+    width: "100%",
   })}
 `;
 
@@ -177,7 +178,12 @@ const Product = () => {
               <Amount>1</Amount>
               <Add />
             </AmountContainer>
-            <Button>ADD TO CART</Button>
+            <Link
+              to="/src/pages/Cart.jsx"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <Button>ADD TO CART</Button>
+            </Link>
           </AddContainer>
         </InfoContainer>
       </Wrraper>

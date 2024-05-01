@@ -2,15 +2,15 @@ import { Badge } from "@material-ui/core";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import React from "react";
 import styled from "styled-components";
-import {mobile} from '../responsive'
+import { mobile } from "../responsive";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   height: 60px;
   ${mobile({
-    height:"50px",
-    
+    height: "50px",
   })}
-  `;
+`;
 const Wrraper = styled.div`
   padding: 10px 20px;
   display: flex;
@@ -18,7 +18,7 @@ const Wrraper = styled.div`
   justify-content: space-between;
 
   ${mobile({
-    padding:"10px 0"
+    padding: "10px 0",
   })}
 `;
 const Left = styled.div`
@@ -30,7 +30,7 @@ const Left = styled.div`
 const Language = styled.span`
   font-size: 14px;
   ${mobile({
-    display:"none"
+    display: "none",
   })}
 `;
 const SearchContainer = styled.div`
@@ -43,7 +43,7 @@ const SearchContainer = styled.div`
 const Input = styled.input`
   border: none;
   ${mobile({
-    width:"50px"
+    width: "50px",
   })}
 `;
 
@@ -56,7 +56,7 @@ const Logo = styled.h1`
   font-weight: bold;
 
   ${mobile({
-    fontSize:"24px"
+    fontSize: "24px",
   })}
 `;
 
@@ -67,8 +67,8 @@ const Right = styled.div`
   justify-content: flex-end;
 
   ${mobile({
-    flex: 2,justifyContent: "center"
-   
+    flex: 2,
+    justifyContent: "center",
   })}
 `;
 
@@ -78,7 +78,8 @@ const MenuItem = styled.div`
   margin-left: 25px;
 
   ${mobile({
-    fontSize:"12px",marginLeft:"10px"
+    fontSize: "12px",
+    marginLeft: "10px",
   })}
 `;
 
@@ -89,21 +90,42 @@ const Navbar = () => {
         <Left>
           <Language>EN</Language>
           <SearchContainer>
-            <Input  placeholder="Searche"/>
+            <Input placeholder="Searche" />
             <Search style={{ color: "gray", fontSize: "16px" }} />
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>Botiqua.</Logo>
+          <Link
+            to="/src/pages/Home.jsx"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <Logo>Botiqua.</Logo>
+          </Link>
         </Center>
         <Right>
-          <MenuItem>Register</MenuItem>
-          <MenuItem>Sign In</MenuItem>
-          <MenuItem>
-            <Badge badgeContent={4} color="primary">
-              <ShoppingCartOutlined />
-            </Badge>
-          </MenuItem>
+          <Link
+            to="/src/pages/Register.jsx"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <MenuItem>Register</MenuItem>
+          </Link>
+
+          <Link
+            to="/src/pages/Login.jsx"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <MenuItem>Sign In</MenuItem>
+          </Link>
+          <Link
+            to="/src/pages/Cart.jsx"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <MenuItem>
+              <Badge badgeContent={4} color="primary">
+                <ShoppingCartOutlined />
+              </Badge>
+            </MenuItem>
+          </Link>
         </Right>
       </Wrraper>
     </Container>

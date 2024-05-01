@@ -4,6 +4,7 @@ import Anounecment from "../componenet/Anouncement";
 import Footer from "../componenet/Footer";
 import { Add, Remove } from "@material-ui/icons";
 import { mobile } from "../responsive";
+import { Link } from "react-router-dom";
 
 const Container = styled.div``;
 
@@ -161,7 +162,13 @@ const Cart = () => {
       <Wrapper>
         <Title>YOUR BAG</Title>
         <Top>
-          <TopButton>CONTINUE SHOPPING</TopButton>
+          <Link
+            to="/src/pages/ProductList.jsx"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <TopButton>CONTINUE SHOPPING</TopButton>
+          </Link>
+
           <TopTexts>
             <TopText>Shopping bag(4)</TopText>
             <TopText>Your Wishlist(0)</TopText>

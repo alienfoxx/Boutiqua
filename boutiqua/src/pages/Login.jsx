@@ -1,6 +1,7 @@
 import { LockOutlined } from "@material-ui/icons";
 import styled from "styled-components";
-import {mobile} from "../responsive"
+import { mobile } from "../responsive";
+import Navbar from "../componenet/Navbar";
 
 const Container = styled.div`
   width: 100vw;
@@ -22,9 +23,8 @@ const Wrapper = styled.div`
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
   ${mobile({
-    width:"75%"
+    width: "75%",
   })}
-
 `;
 
 const Title = styled.h1`
@@ -68,21 +68,24 @@ const Link = styled.a`
 
 const Login = () => {
   return (
-    <Container>
-      <Wrapper>
-        <Title>Sing In</Title>
-        <Form>
-          <Input placeholder="username" />
+    <div>
+      <Navbar />
+      <Container>
+        <Wrapper>
+          <Title>Sing In</Title>
+          <Form>
+            <Input placeholder="username" />
 
-          <Input type="password " placeholder="password" />
-          <Button>LOGIN</Button>
-          <Link>
-            FORGET IT AGAIN ! NO PROBLEM RESET PASSWORD <LockOutlined />{" "}
-          </Link>
-          <Link>CREATE A NEW ACCOUNT</Link>
-        </Form>
-      </Wrapper>
-    </Container>
+            <Input type="password " placeholder="password" />
+            <Button>LOGIN</Button>
+            <Link>
+              FORGET IT AGAIN ! NO PROBLEM RESET PASSWORD <LockOutlined />{" "}
+            </Link>
+            <Link>CREATE A NEW ACCOUNT</Link>
+          </Form>
+        </Wrapper>
+      </Container>
+    </div>
   );
 };
 
